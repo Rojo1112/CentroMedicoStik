@@ -10,10 +10,10 @@ public class RegistroRepository {
     private String pathFile;
     private ListaDoblementeEnlazada<RegistroExamen> registroExamenes;
 
-    private final AutorizacionRepository autorizacionRepository;
+    private final AutorizacionesRepository autorizacionRepository;
 
     public RegistroRepository() {
-        this.autorizacionRepository = new AutorizacionRepository();
+        this.autorizacionRepository = new AutorizacionesRepository();
         this.pathFile = "src/main/java/dataBase/RegistroExamen.Json";
         this.jsonAdapterRegistroExamen = FileJsonAdapter.getInstance();
         this.registroExamenes = jsonAdapterRegistroExamen.getObjects(pathFile, RegistroExamen[].class);
@@ -29,11 +29,22 @@ public class RegistroRepository {
     }
 
     public ListaDoblementeEnlazada<RegistroExamen> buscarPorIdPaciente(String idPaciente) {
-        // Implementación del método de búsqueda por ID del paciente
+        ListaDoblementeEnlazada<RegistroExamen> registrosPorPaciente = new ListaDoblementeEnlazada<>();
+        for (RegistroExamen registro : registroExamenes) {
+            if (registro.getIdPaciente().equals(idPaciente)) {
+                registrosPorPaciente.agregarAlFinal(registro);
+            }
+        }
+        return registrosPorPaciente;
     }
 
     public RegistroExamen buscarPorRadicadoExamen(String radicadoExamen) {
-        // Implementación del método de búsqueda por radicado de examen
+        for (RegistroExamen registro : registroExamenes) {
+            if (registro.getRadicadoExamen().equals(radicadoExamen)) {
+                return registro;
+            }
+        }
+        return null; // Devuelve null si no se encuentra ningún registro con el radicado dado
     }
 
     public void eliminarExamen(RegistroExamen registroExamen) {
