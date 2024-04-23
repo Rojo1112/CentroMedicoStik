@@ -25,7 +25,7 @@ public class Cita {
      * @param pagado       Estado de pago de la cita
      */
     public Cita(String idPaciente, String citasM, String especialidad, String medico, boolean pagado) {
-        this.idCita = Codigos.generarCodigo(citasM, especialidad);
+        this.idCita = generarCodigo(citasM, especialidad);
         this.idPaciente = idPaciente;
         this.citasM = citasM;
         this.especialidad = especialidad;
@@ -33,6 +33,11 @@ public class Cita {
         this.pagado = pagado;
         this.tomado = false;
         actualizarCostoCita();
+    }
+
+    private String generarCodigo(String tipoCita, String especialidad) {
+        Codigos codigos = new Codigos();
+        return codigos.generarCodigo(tipoCita, especialidad);
     }
 
     /**
@@ -117,9 +122,6 @@ public class Cita {
         this.medico = medico;
     }
 
-    /**
-     * Método toString para obtener la información de la cita
-     */
     @Override
     public String toString() {
         return "Cita{" +
