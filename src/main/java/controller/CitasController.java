@@ -9,14 +9,14 @@ import model.modulmain.paciente.Paciente;
 import model.repository.CitaRepository;
 import model.repository.MedicoRepository;
 import model.repository.PacientesRepository;
-import model.repository.RegistroExamenRepository;
+import model.repository.RegistroRepository;
 
 public class CitasController {
 
     private final CitaRepository citaRepository;
     private final PacientesRepository pacientesRepository;
     private final PacientesController pacientesController;
-    private final RegistroExamenRepository  registroExamenRepository;
+    private final RegistroRepository  registroExamenRepository;
 
     private final MedicosController medicosController;
     public ListaDoblementeEnlazada<Paciente> listaExamenes;
@@ -25,7 +25,7 @@ public class CitasController {
     public CitasController() {
         this.medicosController =    new MedicosController();
         this.pacientesController = new PacientesController();
-        this.registroExamenRepository = new RegistroExamenRepository();
+        this.registroExamenRepository = new RegistroRepository();
         this.pacientesRepository = new PacientesRepository();
         this.citaRepository = new CitaRepository();
 
