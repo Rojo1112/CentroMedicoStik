@@ -28,7 +28,7 @@ public class RegistroRepository {
         jsonAdapterRegistroExamen.writeObjects(pathFile, registroExamenes);
     }
 
-    public ListaDoblementeEnlazada<RegistroExamen> buscarPorIdPaciente(String idPaciente) {
+    /*public ListaDoblementeEnlazada<RegistroExamen> buscarPorIdPaciente(String idPaciente) {
         ListaDoblementeEnlazada<RegistroExamen> registrosPorPaciente = new ListaDoblementeEnlazada<>();
         for (RegistroExamen registro : registroExamenes) {
             if (registro.getIdPaciente().equals(idPaciente)) {
@@ -45,7 +45,7 @@ public class RegistroRepository {
             }
         }
         return null; // Devuelve null si no se encuentra ningún registro con el radicado dado
-    }
+    }*/
 
     public void eliminarExamen(RegistroExamen registroExamen) {
         int indice = registroExamenes.buscarElemento(registroExamen);

@@ -1,21 +1,20 @@
 package mainsPruebas;
 
+import controller.CitasController;
+import estructurasDatos.Codigos;
+import model.citasM.Control;
 import model.modulmain.cita.Cita;
 
 public class mainCita {
     public static void main(String[] args) {
-        // Crear una nueva cita
-        Cita cita = new Cita("ID123", "CONTROL", "MEDICINA_GENERAL", "Dr. García", true);
 
-        // Mostrar los detalles de la cita
-        System.out.println("Detalles de la cita:");
-        System.out.println(cita);
+        Codigos generadorCodigo = new Codigos();
 
-        // Cambiar el estado de pago de la cita
-        cita.setPagado(false);
+        CitasController citasController = new CitasController();
 
-        // Mostrar los detalles actualizados de la cita
-        System.out.println("Detalles actualizados de la cita:");
-        System.out.println(cita);
+        citasController.agendarCitaControlValoracion(new Cita("3","VALORACION","MEDICINA_GENERAL", "123456", true));
+        citasController.agendarCitaControlValoracion(new Cita("2","VALORACION","DERMATOLOGIA", "123456", true));;
+
+        //probar cita examen
     }
 }
