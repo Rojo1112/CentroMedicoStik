@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.GestiónDePacientesController">
+    <stylesheets>
+        <URL value="@gestión de pacientes.css" />
+    </stylesheets>
+   <children>
+      <Button fx:id="buscar" layoutX="354.0" layoutY="217.0" mnemonicParsing="false" onAction="#buscaridpaciente" prefHeight="26.0" prefWidth="55.0" text="Buscar" />
+      <TextField fx:id="meteridpsciente" layoutX="227.0" layoutY="177.0" onAction="#buscarpaciente" />
+      <Label layoutX="221.0" layoutY="148.0" text="Buscar paciente por ID: " />
+      <Line endX="100.0" layoutX="312.0" layoutY="247.0" startX="-100.0" />
+      <Line endX="42.5" endY="-18.500015258789062" layoutX="170.0" layoutY="154.0" startX="42.5" startY="93.99998474121094" />
+      <Line endX="100.0" layoutX="312.0" layoutY="134.0" startX="-100.0" />
+      <Line endX="-100.5" endY="-78.50001525878906" layoutX="512.0" layoutY="213.0" startX="-100.5" startY="34.40000915527344" />
+   </children>
+</AnchorPane>
