@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.GestiónDePacientesController">
+    <stylesheets>
+        <URL value="@gestión de pacientes.css" />
+    </stylesheets>
+   <children>
+      <Button fx:id="buscar" layoutX="484.0" layoutY="322.0" mnemonicParsing="false" onAction="#buscaridpaciente" prefHeight="34.0" prefWidth="102.0" text="Buscar" />
+      <TextField fx:id="meteridpsciente" layoutX="303.0" layoutY="189.0" onAction="#buscarpaciente" />
+      <Label layoutX="115.0" layoutY="188.0" text="Buscar paciente por ID: ">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ec7b5" height="70.0" layoutX="-1.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="651.0" />
+      <Text boundsType="VISUAL" fontSmoothingType="LCD" layoutX="24.0" layoutY="49.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="MEDILOG" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ec7b5" height="335.0" layoutX="-2.0" layoutY="68.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
+      <Text layoutX="273.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paciente">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

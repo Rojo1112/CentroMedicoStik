@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PantallaPrincipalController">
+    <stylesheets>
+        <URL value="@pantallaprincipal.css" />
+    </stylesheets>
+   <children>
+      <Button fx:id="aggcita" layoutX="304.0" layoutY="349.0" mnemonicParsing="false" onAction="#agregarcita" text="Agendar cita" />
+      <TextField fx:id="nombreMedico" layoutX="318.0" layoutY="161.0" onAction="#nombremedico" />
+      <TextField fx:id="pacienteid" layoutX="318.0" layoutY="120.0" onAction="#idpaciente" />
+      <Label layoutX="223.0" layoutY="124.0" text="ID del paciente :" />
+      <Label layoutX="266.0" layoutY="165.0" text="Medico:" />
+      <ChoiceBox fx:id="especialidad" layoutX="317.0" layoutY="209.0" onDragDetected="#clickespecialidad" prefWidth="150.0" />
+      <DatePicker fx:id="diacita" layoutX="317.0" layoutY="258.0" onAction="#clickfecha" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="239.0" layoutY="213.0" text="Especialidad:" />
+      <Label layoutX="139.0" layoutY="262.0" text="Dia de agendamiento de la cita:" />
+      <ComboBox fx:id="Pago" layoutX="317.0" layoutY="302.0" onAction="#clickpago" prefWidth="150.0" />
+      <Label layoutX="171.0" layoutY="306.0" text="Ya fue efectuado el pago:" />
+      <Line endX="150.89288330078125" endY="-1.52587890625E-5" layoutX="374.0" layoutY="152.0" startX="-247.4000244140625" startY="-1.52587890625E-5" />
+      <Line endX="151.89288330078125" endY="-1.52587890625E-5" layoutX="374.0" layoutY="194.0" startX="-247.4000244140625" startY="-1.52587890625E-5" />
+      <Line endX="145.4000244140625" endY="-1.52587890625E-5" layoutX="380.0" layoutY="108.0" startX="-255.10711669921875" startY="0.0999908447265625" />
+      <Line endX="130.89288330078125" layoutX="394.0" layoutY="294.0" startX="-269.10711669921875" />
+      <Line endX="140.89288330078125" endY="-1.52587890625E-5" layoutX="384.0" layoutY="244.0" startX="-259.10711669921875" startY="-1.52587890625E-5" />
+      <Line endX="-248.60711669921875" endY="-102.40000915527344" layoutX="372.0" layoutY="210.0" startX="-248.60711669921875" startY="124.29290771484375" />
+      <Line endX="130.89288330078125" endY="-0.20709228515625" layoutX="394.0" layoutY="336.0" startX="-270.314208984375" />
+      <Line endX="-248.60711669921875" endY="-102.40000915527344" layoutX="774.0" layoutY="211.0" startX="-248.60711669921875" startY="124.29290771484375" />
+      <Text layoutX="218.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Citas o Valoracion" wrappingWidth="304.80010986328125">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ec7b5" height="70.0" layoutX="-1.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="651.0" />
+      <Text boundsType="VISUAL" fontSmoothingType="LCD" layoutX="25.0" layoutY="46.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="MEDILOG" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ec7b5" height="335.0" layoutX="-1.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
+   </children>
+</AnchorPane>
